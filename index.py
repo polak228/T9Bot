@@ -6,4 +6,4 @@ if(__name__ == '__main__'):
     config = {}
     with open('config.json', 'r', encoding = 'utf-8') as string:
         config = load(string)
-    T9Bot(config['blanks']).run()
+    T9Bot(config).run()

@@ -8,8 +8,8 @@ from re import sub, compile
 from gc import collect
 
 class T9Bot(object):
-    def __init__(self, blanks : dict):
-        self.blanks = blanks
+    def __init__(self, config : dict):
+        self.blanks = config['blanks']
         self.engine = Bot(environ['TOKEN'], parse_mode = types.ParseMode.HTML)
         self.dispatcher = Dispatcher(self.engine)
         self.speller = YandexSpeller()
